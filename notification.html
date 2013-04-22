@@ -115,6 +115,7 @@
                     pushNotification.register(successHandler, errorHandler, {"senderID":"969909187610","ecb":"onNotificationGCM"});
 
                 } else {
+                                $("#app-status-ul").append('<li>' + 'lum som is doing now some some' + '</li>');
 
                     pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});
 
@@ -242,7 +243,7 @@
 
             function tokenHandler (result) {
 
-                /*$("#app-status-ul").append('<li>token: '+ result +'</li>');*/
+                $("#app-status-ul").append('<li>token: '+ result +'</li>');
 
                 /* Your iOS push server needs to know the token before it can push to this device*/
 
